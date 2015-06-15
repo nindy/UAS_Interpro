@@ -98,8 +98,8 @@ foreach ($arrayanggota as $data) {
                <td>" . $data['nama'] . "</td>
                <td>" . $data['kelas'] . "</td>
                <td>" . $data['nilai'] . "</td>
-               <td><a href='" . $_SERVER['PHP_SELF'] . "?aksi=edit&rank=" . $data['rank'] . "'>Edit</a> |
-                   <a href='" . $_SERVER['PHP_SELF'] . "?aksi=hapus&rank=" . $data['rank'] . "'>Hapus</a></td>
+               <td><a href='" . $_SERVER['PHP_SELF'] . "?aksi=edit&rank=" . $rank['rank'] . "'>Edit</a> |
+                   <a href='" . $_SERVER['PHP_SELF'] . "?aksi=hapus&rank=" . $rank'rank'] . "'>Hapus</a></td>
             </tr>";
     $i++;
 }
