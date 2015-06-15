@@ -28,9 +28,9 @@ $db->connectMySQL();
 if (isset($_GET['aksi'])) {
     if ($_GET['aksi'] == 'hapus') {
         // baca ID dari parameter ID Anggota yang akan dihapus
-        $id = $_GET['rank'];
+        $rank = $_GET['rank'];
         // proses hapus data anggota berdasarkan ID via method
-        $db->hapusAnggota($id);
+        $db->hapusAnggota($rank);
     } elseif ($_GET['aksi'] == 'tambah') {
         echo"<br>
 <form method=POST action='?aksi=tambahAnggota'>
@@ -51,7 +51,7 @@ if (isset($_GET['aksi'])) {
 // proses edit data
     else if ($_GET['aksi'] == 'edit') {
         // baca ID anggota yang akan diedit
-        $id = $_GET['rank'];
+        $rank = $_GET['rank'];
 // menampilkan form edit anggota pakai method bacaDataAnggota()
         ?>   
  
