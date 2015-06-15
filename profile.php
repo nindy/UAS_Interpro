@@ -58,13 +58,13 @@ if (isset($_GET['aksi'])) {
         <form method="post" action="<?php $_SERVER['PHP_SELF'] ?>?aksi=update">
             <table>
                 <tr><td>Nama Mahasiswa</td><td>:</td>
-                    <td><input type="text" name="nama" value="<?php echo $db->bacaDataAnggota('nama', $id); ?>"></td>
+                    <td><input type="text" name="nama" value="<?php echo $db->bacaDataAnggota('nama', $rank); ?>"></td>
                 </tr>
                 <tr><td>Kelas</td><td>:</td>
-                    <td><input type="text" name="kelas" value="<?php echo $db->bacaDataAnggota('kelas', $id); ?>" size="40"></td>
+                    <td><input type="text" name="kelas" value="<?php echo $db->bacaDataAnggota('kelas', $rank); ?>" size="40"></td>
                 </tr>
                 <tr><td>Nilai</td><td>:</td>
-                    <td><input type="text" name="nilai" value="<?php echo $db->bacaDataAnggota('nilai', $id); ?>"></td>
+                    <td><input type="text" name="nilai" value="<?php echo $db->bacaDataAnggota('nilai', $rank); ?>"></td>
                 </tr> 
             </table>
             <input type="hidden" name="id" value="<?php echo $rank; ?>">
