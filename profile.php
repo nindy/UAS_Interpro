@@ -57,7 +57,7 @@ if (isset($_GET['aksi'])) {
  
         <form method="post" action="<?php $_SERVER['PHP_SELF'] ?>?aksi=update">
             <table>
-                <tr><td>Nama Mahasiswa</td><td>:</td>
+                <tr><td>Nama</td><td>:</td>
                     <td><input type="text" name="nama" value="<?php echo $db->bacaDataAnggota('nama', $rank); ?>"></td>
                 </tr>
                 <tr><td>Kelas</td><td>:</td>
@@ -67,7 +67,7 @@ if (isset($_GET['aksi'])) {
                     <td><input type="text" name="nilai" value="<?php echo $db->bacaDataAnggota('nilai', $rank); ?>"></td>
                 </tr> 
             </table>
-            <input type="hidden" name="id" value="<?php echo $rank; ?>">
+            <input type="hidden" name="rank" value="<?php echo $rank; ?>">
             <input type="submit" name="submit" value="Update Data">
         </form>
  
@@ -87,7 +87,7 @@ $arrayanggota = $db->tampilAnggota();
 echo"</table> <br> <a href='?aksi=tambah'>TAMBAH</a>";
 echo "<table border='1' cellpadding='5'>
       <tr><th>Rank</th>
-           <th>Nama Mahasiswa</th>
+           <th>Nama/th>
            <th>Kelas</th>
            <th>Nilai</th>
            <th>Aksi</th>
