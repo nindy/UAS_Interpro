@@ -67,7 +67,7 @@ if (isset($_GET['aksi'])) {
                     <td><input type="text" name="nilai" value="<?php echo $db->bacaDataAnggota('nilai', $rank); ?>"></td>
                 </tr> 
             </table>
-            <input type="hidden" name="rank" value="<?php echo $rank; ?>">
+            <input type="hidden" name="id" value="<?php echo $rank; ?>">
             <input type="submit" name="submit" value="Update Data">
         </form>
  
@@ -99,7 +99,7 @@ foreach ($arrayanggota as $data) {
                <td>" . $data['kelas'] . "</td>
                <td>" . $data['nilai'] . "</td>
                <td><a href='" . $_SERVER['PHP_SELF'] . "?aksi=edit&rank=" . $data['rank'] . "'>Edit</a> |
-                   <a href='" . $_SERVER['PHP_SELF'] . "?aksi=hapus&rank=" . $data'rank'] . "'>Hapus</a></td>
+                   <a href='" . $_SERVER['PHP_SELF'] . "?aksi=hapus&rank=" . $data['rank'] . "'>Hapus</a></td>
             </tr>";
     $i++;
 }
